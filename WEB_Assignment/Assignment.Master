@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Assignment.Master.cs" Inherits="WEB_Assignment.Login1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Css/MasterPageCss.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="dropdwn">
+            <nav>
+                <img class="logo" src="Picture/Logo.png" />
+                <ul>
+                    <li><a href="Homepage.aspx">Home</a></li>
+                    <li><a href="ArtGallery.aspx">Gallery</a></li>
+                    <li><a>Art Work<i class="fas fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="UploadArtWork.aspx">Upload Art Work</a></li>
+                            <li><a href="UpdateArtWork.aspx">Update Art Work</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="PurchaseHistory.aspx">History</a></li>
+                    <li><a href="WishList.aspx">Wish List</a></li>
+                    <li><a>My Account</a>
+                        <ul>
+                            <li><a href="ManageAccount.aspx">Manage Account</a></li>
+                            <li><a>
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="RedirectToLoginPage" LogoutPageUrl="~/Final_Login.aspx" />
+                            </a></li>
+                            <li><a href="FinalRegister.aspx">Sign Up</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="ContentPlaceHolderLocation">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+    </form>
+</body>
+</html>
